@@ -1,0 +1,96 @@
+body{
+    width: 99%;
+    height: 100%;
+   position: relative;
+   }
+
+   nav{
+    display: flex;
+    gap: 700px;
+    
+   }
+
+   .blogs-content{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 500px;
+   }
+   .blogs-content,p{
+    font-size: 15px;
+   }
+   .blogs-content,h3{
+    font-size: 25px;
+   }
+
+   .about-content{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 500px;
+   }
+   .site-title{
+    font-size: 25px;
+   }
+   .site-title, p{
+    margin-top: -5px;
+   }
+
+   ul,li{
+    list-style: none;
+    
+   }
+   
+   ul ,li, a{
+    text-decoration: none;
+    display: inline;
+    float: right;
+    margin: 5px;
+   }
+   footer{
+    margin-top: 400px;
+    margin-left: 500px;
+    
+   }
+   .create-blog content, form{
+    position: absolute;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 400px;
+    margin-top: -50px;
+    
+   }
+   .create-blog content,label{
+     font-size: 25px;
+
+   }
+   #title{
+    font-size: 20px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+   }
+   #snippet{
+    font-size: 20px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   }
+ #body{
+    font-size: 27px;
+    color: black;
+    height: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+ button{
+    background-color: green;
+    border-radius: 7px;
+    width: 150px;
+    height: 30px;
+    border: none;
+    font-size: 25px;
+    margin-left: 100px;
+ }
+input{
+border: none;
+border-bottom: 2px black solid;
+outline: none;
+}
