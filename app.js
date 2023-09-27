@@ -1,8 +1,9 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const Blog = require('./models/blogs');
 const { result } = require('lodash');
+const { render } = require('ejs');
+const blogRoutes = require('./routes/blogRoutes');
 
 const app = express();
 
@@ -12,11 +13,13 @@ mongoose.connect(dbURI,{useNewUrlParser:true , useUnifiedTopology:true})
 .then((results)=>app.listen(3000))
 .catch((err)=>console.log(err));
 
-// listening for request to the port 3000
 
+
+//middleware
 
 app.use(morgan('dev'));
 app.use(express.static('public'));
+app.use(express.urlencoded({extended:true}));
 
 
 app.set('view engine','ejs');
@@ -35,22 +38,7 @@ app.get('/about',(req,res)=>{
 
 //blogs routes
 
-app.get('/blogs',(req,res) => {
-    Blog.find().sort({createdAt:-1})
-    .then((result) => {
-        res.render('index',{title:'All Blogs',blogs: result})
-    })
-    .catch((err) => {
-        console.log(err)
-    })
-})
-
-app.get('/blogs/create',(req,res)=>{
-    res.render('create',{title:'create new Blog'});
-});
-
-
-
+app.use('/blogs',blogRoutes);
 // //Redirect 
 
 // app.get('/about-us',(req,res)=>{

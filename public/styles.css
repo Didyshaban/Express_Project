@@ -94,3 +94,35 @@ border: none;
 border-bottom: 2px black solid;
 outline: none;
 }
+.single,a{
+   float: none;
+   margin: 0px;
+}
+
+.blogs-content a{
+   display: block;
+   margin: 40px 0;
+   padding-left: 30px;
+   border-left: 6px solid crimson;
+   font-size: 15px;
+}
+.blogs-content a:hover h1{
+   color: crimson;
+
+}
+
+.details-content{
+   position: relative;
+}
+.delete{
+   position:absolute;
+   top: 0;
+   right: 0;
+   border-radius: 50%;
+   padding: 8px;
+
+}
+.delete:hover{
+   cursor: pointer;
+   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}

@@ -6,14 +6,14 @@
     <div class="create-blog content">
        
         <pre>
-       <form>
+       <form action="/blogs" method="post">
         <h1>Create your Blog</h1>
         <label for="title">Blog title:</label>
-        <input type="text" id="title" placeholder="Write your blog title" required>
+        <input type="text" id="title" name="title" placeholder="Write your blog title" required>
         <label for="snippet">Blog snippet:</label>
-        <input type="text" id="snippet" placeholder="Write your Snippet " required>
+        <input type="text" id="snippet" name="snippet" placeholder="Write your Snippet " required>
         <label for="body">Blog body:</label>
-        <textarea  id="body" ></textarea>
+        <textarea  id="body" name="body" ></textarea>
         <button>submit</button>
 
        </form>
